@@ -1,0 +1,77 @@
+# ========================
+# GLOBAL - Common ignores
+# ========================
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.tsbuildinfo
+*.pem
+.DS_Store
+.vscode/
+.temp/
+.tmp/
+pids
+*.launch
+*.sublime-workspace
+*.sqlite
+*.lock
+.nyc_output/
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+.env
+
+# ========================
+# ENVIRONMENT FILES
+# ========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# ========================
+# FRONTEND (Next.js)
+# ========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel
+frontend/.pnp
+frontend/pnp.*
+frontend/yarn.lock
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+frontend/next-env.d.ts
+frontend/.pnpm-debug.log*
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ========================
+# BACKEND (NestJS)
+# ========================
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/logs/
+backend/.idea/
+backend/.vscode/
+backend/.c9/
+backend/.nyc_output/
+backend/.project
+backend/.classpath
+backend/.settings/
+backend/.pnpm-debug.log*
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/lerna-debug.log*

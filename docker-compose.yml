@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: chat_backend
+    ports:
+      - "8017:8017"
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+        SERVER_API_URL: ${SERVER_API_URL}
+        NEXTAUTH_URL: ${NEXTAUTH_URL}
+        NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+    container_name: chat_frontend
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3000}:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
